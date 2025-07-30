@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.prompt {
+  margin-right: 8px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+#output {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}

@@ -1,48 +1,52 @@
-const button = document.getElementById('myButton');
+const projects = [
+  {
+    title: "Zoom-Zoom Website",
+    description: "A button that runs away when you try to click it.",
+    link: "zoom/zoom.html"
+  },
+  {
+    title: "Useless Clock",
+    description: "A clock that always shows the wrong time.",
+    link: "clock/clock.html"
+  },
+  {
+    title: "The Useless Button",
+    description: "Clicking it does... absolutely nothing!",
+    link: "button/button.html"
+  },
+  {
+    title: "Useless Timer",
+    description: "A timer that times nothing useful.",
+    link: "404/404.html"
+  },
+  {
+    title: "Confused Translator",
+    description: "Turns your words into weird nonsense.",
+    link: "scroll/scroll.html"
+  },
+  {
+    title: "Anti-Fitness Tracker",
+    description: "Rewards you for being lazy.",
+    link: "hacking/hacking.html"
+  },
+   {
+    title: "Anti-Fitness Tracker",
+    description: "Rewards you for being lazy.",
+    link: "drama/drama.html"
+  }
+];
 
-const emojis = ["🥰", "😎", "😂", "😱", "🤩", "😜", "🙈", "😍", "😇", "😉"];
+const cardContainer = document.getElementById("cardContainer");
 
+projects.forEach(project => {
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-    button.addEventListener('mouseover', () => {
-      const maxX = window.innerWidth - button.offsetWidth;
-      const maxY = window.innerHeight - button.offsetHeight;
+  card.innerHTML = `
+    <h2>${project.title}</h2>
+    <p>${project.description}</p>
+    <button onclick="location.href='${project.link}'">Go</button>
+  `;
 
-      const newX = Math.random() * maxX;
-      const newY = Math.random() * maxY;
-
-      button.style.left = `${newX}px`;
-      button.style.top = `${newY}px`;
-
-      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-      button.textContent = `Catch Me If You Can ${randomEmoji}`;
-    });
-
-    button.addEventListener("click", (e) => {
-      const particles = 30;
-      for (let i = 0; i < particles; i++) {
-        const particle = document.createElement("div");
-        particle.className = "particle";
-
-        const x = e.clientX;
-        const y = e.clientY;
-
-        const angle = Math.random() * 2 * Math.PI;
-        const radius = Math.random() * 100;
-
-        const offsetX = Math.cos(angle) * radius + "px";
-        const offsetY = Math.sin(angle) * radius + "px";
-
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-        particle.style.setProperty("--x", offsetX);
-        particle.style.setProperty("--y", offsetY);
-
-        document.body.appendChild(particle);
-        button.textContent = "You Won😒"
-
-        // Remove particle after animation
-        setTimeout(() => {
-          particle.remove();
-        }, 700);
-      }
-    });
+  cardContainer.appendChild(card);
+});

@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  background-color: #0e0e0e;
+  color: #0ff;
+  font-family: monospace;
+  overflow-x: hidden;
+}
+
+#zoom-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}

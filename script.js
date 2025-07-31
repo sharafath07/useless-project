@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Zoom-Zoom Website",
-    description: "A button that runs away when you try to click it.",
+    description: "A website zoom in to infinite times while scrolling down.",
     link: "zoom/zoom.html"
   },
   {
@@ -10,27 +10,27 @@ const projects = [
     link: "clock/clock.html"
   },
   {
-    title: "The Useless Button",
-    description: "Clicking it does... absolutely nothing!",
+    title: "Catch Me",
+    description: "A button that moves from position whenever you hover on the button.",
     link: "button/button.html"
   },
   {
-    title: "Useless Timer",
-    description: "A timer that times nothing useful.",
+    title: "404",
+    description: "A website generate 404 error messages.",
     link: "404/404.html"
   },
   {
-    title: "Confused Translator",
-    description: "Turns your words into weird nonsense.",
+    title: "Scroller",
+    description: "A website that scroll to infinite.",
     link: "scroll/scroll.html"
   },
   {
-    title: "Anti-Fitness Tracker",
-    description: "Rewards you for being lazy.",
+    title: "Hacker",
+    description: "A hacking Commander to hack google.",
     link: "hacking/hacking.html"
   },
    {
-    title: "Anti-Fitness Tracker",
+    title: "Ask me",
     description: "Rewards you for being lazy.",
     link: "drama/drama.html"
   }
